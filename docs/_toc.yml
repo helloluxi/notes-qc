@@ -7,4 +7,7 @@ parts:
 - caption: Quantum Search
   chapters:
   - file: Search/FixedPointSearch
+- caption: QCQI
+  chapters:
+  - file: QCQI/chap6
 
