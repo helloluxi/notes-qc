@@ -15,7 +15,7 @@ $$
     + But if $\Delta t = \pi$, then it's equivalent to the Grover's search algorithm.
 + Optimality of the search algorithm
     + Suppose the unstrutured search problem has $M$ solutions out of $N$, then $O(\sqrt{N/M})$ oracle calls are required to find a solution;
-    + 
+    + To gain further speedup, we should make use of the structure of the oracle.
 + Black box algorithm limits
     + $Q_2(F)\geq\widetilde{deg}(F)/2$, where $Q_2$ is the bounded error quantum complexity (with success probability at least 2/3) and $\widetilde{deg}$ is the degree of the approximation polynomial such that $|p(X)-F(X)|<1/3$;
     + Without extra information about the structure of the black box oracle function $f$, no exponential speedup over classical algorithms is possible.
@@ -55,7 +55,7 @@ The algorithm is as follow:
 
 + First randomly choose $1\le j\le N$.
 + Then loop the following procedures:
-    + Construct an oracle to implement the Boolean function $$f_j(i) = \begin{cases} 1,& x_i < x_j \\ 0,& \text{otherwise} \end{cases}.$$
+    + Construct an oracle to implement the Boolean function $f_j(i) = \begin{cases} 1,& x_i < x_j \\ 0,& \text{otherwise} \end{cases}.$
     + Apply Grover's Search to $f_j$.
     + If a solution $i_0$ is found, set $j=i_0$. In contrast, if no solution can be found, break.
 + Return $j$.
